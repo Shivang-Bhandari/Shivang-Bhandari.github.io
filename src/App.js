@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import {themes, ThemeContext} from './ThemeContext'; 
 import Sidebar from './components/Sidebar'
-;import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 class App extends React.Component {
   constructor(props) {
@@ -25,10 +24,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-      <Sidebar />
-          <p>
-            SHIVANG BHANDARI
-          </p>
+        <Sidebar />
       </div>
     );
   }

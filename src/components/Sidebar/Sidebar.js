@@ -1,15 +1,16 @@
 import React from 'react';
-import styles from './Sidebar.scss';
+
+import Werewolf from '../../svg/Werewolf';
+
+import './Sidebar.scss';
 
 
 const Sidebar = () => {
 	return (
-		<aside
-			className={`${styles.verticalMenu}`}
-		>
-			lol
-		</aside>
-	);
+    <aside className="verticalMenu">
+        <Werewolf className="headerContainer" />
+    </aside>
+  );
 };
 
 export default Sidebar;

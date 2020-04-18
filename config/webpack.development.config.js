@@ -25,10 +25,11 @@ module.exports = {
     filename: "bundle.js"
   },
   resolve: {
+    extensions: [".js", ".jsx"],
     alias: {
+      '@src': path.join(__dirname, '../src'),
       react: path.resolve(path.join(__dirname, "../node_modules/react"))
-    },
-    extensions: [".js", ".jsx"]
+    }
   },
   module: {
     rules: [
@@ -37,12 +38,9 @@ module.exports = {
         exclude: [/(node_modules\/)/],
         use: ["babel-loader"]
       },
+      
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      },
-      {
-        test: /\.scss$/,
+        test: /\.(css|scss)$/,
         use: [
           { loader: "style-loader" },
           {
@@ -72,8 +70,8 @@ module.exports = {
   devServer: {
     contentBase: OUTPUT,
     compress: true,
-    host: '0.0.0.0',
-    port: 9000,
-  },
+    host: "0.0.0.0",
+    port: 9000
+  }
 };
 
