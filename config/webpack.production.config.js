@@ -10,7 +10,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const INPUT = "./src/index.js";
 const OUTPUT = path.resolve(__dirname, "../build");
-
+console.log(OUTPUT);
 const plugins = [
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   new MiniCssExtractPlugin({
@@ -19,14 +19,8 @@ const plugins = [
   }),
   new HtmlWebpackPlugin({
     template: path.resolve(__dirname, "../src/index.html"),
-    inject: false,
+    inject: true,
   }),
-  new CompressionPlugin({
-    test: /\.(js|jsx|scss|css|html)$/,
-    filename: "[path][query]",
-    minRatio: Number.MAX_SAFE_INTEGER,
-    threshold: 0
-  })
 ];
 
 module.exports = {
