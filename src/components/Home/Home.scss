@@ -1,3 +1,10 @@
 .home {
   width: 100%;
+  color: #ececec;
+  text-align: left;
+  
+  &-nameSpan {
+    color: #fdd835 !important;
+  }
+
 }

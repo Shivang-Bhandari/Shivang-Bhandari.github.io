@@ -11,7 +11,7 @@ const Sidebar = () => {
 	return (
     <aside className="verticalMenu">
       <section>
-        <Werewolf className="verticalMenuIcon" />
+        <Werewolf className="verticalMenuIcon-hover" />
       </section>
       <section className="verticalMenuList">
         <a href="https://github.com/Shivang-Bhandari" target="_blank">

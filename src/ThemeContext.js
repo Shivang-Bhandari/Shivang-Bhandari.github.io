@@ -1,16 +1,32 @@
 import React from "react";
 
-export const themes = {
+// to maintain theme state 
+const [isLightTheme, setIsLightTheme] = React.useState(false);
+
+// to toggle theme
+const toggleTheme = setIsLightTheme(!isLightTheme);
+
+
+const themes = {
   light: {
-    foreground: "#000000",
+    foreground: "#222831",
     background: "#eeeeee"
   },
   dark: {
-    foreground: "#ffffff",
-    background: "#222222"
+    foreground: "#eeeeee",
+    background: "#222831"
   }
 };
 
-export const ThemeContext = React.createContext(
-  themes.dark // default value
-);
+const defaultContextData = {
+  theme: themes.dark,
+  toggle: toggleTheme
+}
+
+const themeContext = React.createContext(defaultContextData);
+
+export const themeContextProvider = children => {
+  <ThemeContext.Provider value={{ isLightTheme, toggleTheme }}>
+    {children}
+  </ThemeContext.Provider>;
+};

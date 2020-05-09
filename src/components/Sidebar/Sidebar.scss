@@ -21,6 +21,12 @@ $animateExpand: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
     background: #222831;
     transition: 0.3s ease-in-out;
 
+    &-hover{
+    border-radius: 50%;
+
+      box-shadow: -5px -5px 10px #181d23, 5px 5px 10px #2c333f;
+    }
+
     &:hover {
       box-shadow: -5px -5px 10px #181d23, 5px 5px 10px #2c333f;
     }
@@ -29,144 +35,5 @@ $animateExpand: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   &List {
     margin-bottom: 0px;
     margin-top: auto;
-  }
-
-  &Header {
-    display: flex;
-    align-items: center;
-    padding: 12px 0;
-    background-color: #37495c;
-    padding: 12px ($width / 2 - 16px);
-
-    &Logo {
-      min-width: 32px;
-      width: 32px;
-      height: 32px;
-      margin-right: 12px;
-    }
-
-    &Text {
-      position: relative;
-      display: none;
-      font-size: 14px;
-      color: #fff;
-      white-space: nowrap;
-      opacity: 1;
-      transition: 0.2s ease-out;
-      font-family: "Roboto";
-      top: 1px;
-      font-weight: 600;
-    }
-  }
-
-  &Items {
-    margin: 0;
-    padding: 0;
-  }
-
-  &Item {
-    line-height: 0;
-
-    > div {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      padding: 12px ($width / 2 - 10px);
-      cursor: pointer;
-      transition: 0.2s ease-out;
-    }
-
-    &:hover {
-      background-color: lighten(#27394c, 5);
-    }
-
-    &.active {
-      background-color: lighten(#27394c, 10);
-      .verticalMenuItemIcon {
-        opacity: 1;
-      }
-
-      .verticalMenuItemText {
-        color: #fff;
-      }
-    }
-
-    &Icon {
-      min-width: 20px;
-      width: 20px;
-      height: 20px;
-      margin-right: 8px;
-      svg {
-        width: 100%;
-        height: 100%;
-        & * {
-          stroke: white;
-          fill: none;
-        }
-      }
-    }
-
-    &Text {
-      position: relative;
-      display: none;
-      font-size: 12px;
-      color: #eee;
-      white-space: nowrap;
-      opacity: 0;
-      transition: 0.2s ease-out;
-      font-family: "Roboto";
-      top: 1px;
-      font-weight: 300;
-    }
-  }
-
-  &Footer {
-    margin-top: auto;
-    margin-bottom: 0;
-
-    &Expand {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: lighten(#27394c, 5);
-      padding: 8px;
-      height: auto;
-      box-sizing: border-box;
-      svg {
-        width: 16px;
-        height: 16px;
-        transition: 0.4s ease-out;
-      }
-    }
-  }
-
-  .platformSupport {
-    position: absolute;
-    z-index: 999999;
-    bottom: 14px;
-    margin-left: 70px;
-    transition : $animateExpand;
-  }
-  &.expanded {
-    .platformSupport{
-      margin-left: 214px;
-    }
-    .verticalMenuHeader,
-    .verticalMenuItem {
-      &Text {
-        display: block;
-        opacity: 1;
-      }
-    }
-    .verticalMenuItem {
-      width: 100%;
-    }
-
-    .verticalMenuFooter {
-      .toggle svg {
-        transform: rotate(180deg);
-      }
-    }
   }
 }
