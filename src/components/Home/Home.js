@@ -1,8 +1,6 @@
 import React from "react";
 import './Home.scss';
 
-import { ABTest, Variant } from "../ABTest";
-
 const Home = () => {
   return (
     <div className="home">
