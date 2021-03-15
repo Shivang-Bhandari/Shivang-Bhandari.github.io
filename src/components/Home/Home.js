@@ -9,8 +9,8 @@ const Home = () => {
       <span className="home-nameSpan">Bhandari.</span>
       <br />
       <span>
-        I'm a Frontend engineer, based out of Mumbai, currently working at
-        Haptik.
+        A Frontend engineer, based out of India, currently working at
+        Smallcase.
       </span>
     </div>
   );
